@@ -14,8 +14,9 @@ if maxResults > 100:
 
 dump = []
 
-def getComments(vidID):
+def getComments(vidID, fName='allComments'):
     video_id = vidID
+    file_name = fName + '.tsv'
     nextPageToken = ""
     stop = False
     count = 0
@@ -46,7 +47,7 @@ def getComments(vidID):
         count += 1
 
     # 
-    with open("allComments.tsv", "w+", encoding='utf-8') as f:
+    with open(file_name, "w+", encoding='utf-8') as f:
         f.write("\n".join(dump))
         
 def main():
