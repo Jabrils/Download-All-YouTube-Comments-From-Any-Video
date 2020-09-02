@@ -14,7 +14,7 @@ if maxResults > 100:
 
 dump = []
 
-def getComments(vidID, fName='allComments'):
+def getComments(vidID, fName: str='allComments'):
     video_id = vidID
     file_name = fName + '.tsv'
     nextPageToken = ""
